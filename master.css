@@ -1,0 +1,31 @@
+/*
+Color Palette:
+Primary 1: #222628
+Primary 2: #c8f41a
+Black: #242520
+Gray: #d5d4d4
+White: #f8f7f3
+*/
+
+body {
+  background-color: #f8f7f3;
+}
+
+header {
+  background-color: #222628;
+}
+
+h1 {
+  font-family: "Langdon", Helvetica;
+  color: #f8f7f3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  color: #c8f41a;
+  font-family: "Langdon", Helvetica; 
+}
