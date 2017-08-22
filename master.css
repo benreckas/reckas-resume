@@ -8,24 +8,64 @@ White: #f8f7f3
 */
 
 body {
-  background-color: #f8f7f3;
+  background-color: #d5d4d4;
 }
 
 header {
-  background-color: #222628;
+  background-color: #d5d4d4;
+  width: 100%;
+  text-align: center;
+}
+
+nav li {
+  color: #222628;
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  font-family: "Langdon", Helvetica;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+  margin-bottom: 20px;
+}
+
+nav li:hover {
+  opacity: .6;
+
 }
 
 h1 {
   font-family: "Langdon", Helvetica;
-  color: #f8f7f3;
+  color: #222628;
+  font-size: 10em;
+  font-kerning: none;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  line-height: .8em;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: inherit
 }
 
 h2 {
-  color: #c8f41a;
-  font-family: "Langdon", Helvetica; 
+  color: #222628;
+  font-family: "Langdon", Helvetica;
+  font-size: 4.1em;
+  font-kerning: none;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  line-height: .8em;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.slogan {
+  font
 }
