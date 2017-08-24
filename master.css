@@ -8,6 +8,7 @@ White: #f8f7f3
 */
 
 html body main h1 h2 h3 h4 ul li nav p section div{
+  width: 100%;
   height: 100%;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
@@ -16,7 +17,8 @@ html body main h1 h2 h3 h4 ul li nav p section div{
 
 body {
   background-color: #e3e3e3;
-  padding: 10px 0 0 0;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
 header {
@@ -82,10 +84,28 @@ h3 {
   margin: 0 0 0 0;
 }
 
+h4 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-kerning: none;
+  line-height: .8em;
+  margin: 15px 0 10px 0;
+}
+
 ul {
     list-style-type: none;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
+}
+
+li {
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: center;
 }
 
 a.logo {
@@ -127,19 +147,20 @@ section.about img {
   justify-content: space-around;
   margin-right: 50px;
   opacity: .8;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+  border: 3px solid #777777;
 }
 
-/* IMAGE HOVER
+
 section.about img:hover {
-  transform: scale(1.025);
+  transform: scale(1.02);
   opacity: 1;
-  box-shadow: 0 0 2px #353d44;
+  /*box-shadow: 0 0 5px #353d44;*/
 }
-*/
+
 
 section.about div {
   width: 500px;
@@ -157,18 +178,65 @@ section.about h3 {
 
 .skills {
   width: 100%;
+  margin: 40px 0 40px 0;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.left-column {
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  margin: 40px 40px 0 0;
+}
+
+.right-column {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
   margin: 40px 0 0 0;
 }
 
+.college p {
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: center;
+}
 
 .college img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 5px;
+}
 
+.bitwise {
+  margin: 80px 0 0 0;
 }
 
 .bitwise img {
-  height: 80px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .codeschool img {
-  height: 90px;
+  height: auto;
+  width: 250px;
+  padding: 5px 0 0 0;
 }
