@@ -1,71 +1,174 @@
 /*
 Color Palette:
-Primary 1: #222628
-Primary 2: #c8f41a
+Primary 1: #353d44
+Primary 2: #df4300
 Black: #242520
 Gray: #d5d4d4
 White: #f8f7f3
 */
 
+html body main h1 h2 h3 h4 ul li nav p section div{
+  height: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  display: flex;
+}
+
 body {
-  background-color: #d5d4d4;
+  background-color: #e3e3e3;
+  padding: 10px 0 0 0;
 }
 
 header {
-  background-color: #d5d4d4;
+  background-color: #353d44;
   width: 100%;
   text-align: center;
+  padding: 25px 0 25px 0;
+  border-bottom: 3px solid #777777;
+}
+
+nav {
+  margin: 25px 0 0 0;
+  padding: 0 0 0 0;
+  width: 100%;
 }
 
 nav li {
-  color: #222628;
+  color: #f8f7f3;
+  font-size: 1.4em;
   display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 20px;
+  margin: 0 20px;
   font-family: "Langdon", Helvetica;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  transition: all .2s;
-  margin-bottom: 20px;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
 }
 
 nav li:hover {
-  opacity: .6;
-
+  opacity: .5;
 }
 
 h1 {
   font-family: "Langdon", Helvetica;
-  color: #222628;
   font-size: 10em;
-  font-kerning: none;
   margin-top: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
+  font-kerning: none;
   line-height: .8em;
 }
 
 a {
   text-decoration: none;
-  color: inherit
+  color: inherit;
 }
 
 h2 {
-  color: #222628;
   font-family: "Langdon", Helvetica;
   font-size: 4.1em;
   font-kerning: none;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-top: -10px;
+  margin-bottom: 0px;
   line-height: .8em;
+}
 
+h3 {
+  text-align: center;
+  font-size: 2.3em;
+  color: #353d44;
+  font-family: "Langdon", Helvetica;
+  font-kerning: none;
+  line-height: .8em;
+  margin: 0 0 0 0;
 }
 
 ul {
     list-style-type: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+a.logo {
+  color: #f8f7f3;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+a.logo:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+p {
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  margin: 0 0 0 0;
+  line-height: 1.5;
+  color: #353d44;
+}
+
+.about {
+  width: 100%;
+  margin: 40px 0 0 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+section.about img {
+  height: 250px;
+  width: 250px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 50px;
+  opacity: .8;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+/* IMAGE HOVER
+section.about img:hover {
+  transform: scale(1.025);
+  opacity: 1;
+  box-shadow: 0 0 2px #353d44;
+}
+*/
+
+section.about div {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-around;
+  justify-content: center;
+
+}
+
+section.about h3 {
+  margin: 0 0 10px 0;
+}
+
+.skills {
+  width: 100%;
+  margin: 40px 0 0 0;
 }
 
 
-.slogan {
-  font
+.college img {
+
+}
+
+.bitwise img {
+  height: 80px;
+}
+
+.codeschool img {
+  height: 90px;
 }
