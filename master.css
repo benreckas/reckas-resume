@@ -17,7 +17,7 @@ html body main h1 h2 h3 h4 ul li nav p section div{
 
 body {
   background-color: #e3e3e3;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
   padding: 0;
 }
 
@@ -27,6 +27,7 @@ header {
   text-align: center;
   padding: 25px 0 25px 0;
   border-bottom: 3px solid #777777;
+  border-top: 3px solid #777777;
 }
 
 nav {
@@ -106,6 +107,17 @@ li {
   font-size: 1em;
   line-height: 1.7;
   text-align: center;
+  list-style: none;
+}
+
+footer {
+  background-color: #353d44;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0 25px 0;
+  margin: 40px 0 0 0;
+  border-bottom: 3px solid #777777;
+  border-top: 3px solid #777777;
 }
 
 a.logo {
@@ -154,13 +166,12 @@ section.about img {
   border: 3px solid #777777;
 }
 
-
+/*
 section.about img:hover {
   transform: scale(1.02);
   opacity: 1;
-  /*box-shadow: 0 0 5px #353d44;*/
 }
-
+*/
 
 section.about div {
   width: 500px;
@@ -183,26 +194,27 @@ section.about h3 {
 
 .background {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   align-content: center;
   justify-content: center;
   width: 100%;
 }
 
 .left-column {
-  width: 250px;
-  height: 500px;
+  width: 1000px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: flex-start;
-  margin: 40px 40px 0 0;
+  margin: 40px 0 0 0;
 }
 
 .right-column {
-  width: 500px;
-  height: 500px;
+  width: 1000px;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -221,22 +233,70 @@ section.about h3 {
 
 .college img {
   height: auto;
-  width: 100%;
+  width: 250px;
   margin-bottom: 5px;
 }
 
 .bitwise {
-  margin: 80px 0 0 0;
+  margin: 30px 0 0 300px;
 }
 
 .bitwise img {
   height: auto;
-  width: 100%;
+  width: 250px;
   margin-bottom: 15px;
 }
 
-.codeschool img {
+.codeschool {
+  width: 1000px;
   height: auto;
+  margin: -50px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.codeschool img {
   width: 250px;
+  height: auto;
   padding: 5px 0 0 0;
+  margin: 0 375px 0 375px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.badges {
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.badges img {
+  width: 100px;
+  height: 100px;
+  margin: 40px 40px 0 40px;
+  padding: 0 0 0 0;
+  opacity: .8;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  border-radius: 50%;
+}
+
+.badges img:hover {
+  transform: scale(1.7) rotate(3deg);
+  opacity: 1;
+  box-shadow: 0 0 10px #777777;
 }
