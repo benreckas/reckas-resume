@@ -192,7 +192,7 @@ section.about h3 {
   margin: 40px 0 40px 0;
 }
 
-.background {
+.education {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -201,7 +201,7 @@ section.about h3 {
   width: 100%;
 }
 
-.left-column {
+.top-flex {
   width: 1000px;
   height: auto;
   display: flex;
@@ -212,7 +212,7 @@ section.about h3 {
   margin: 40px 0 0 0;
 }
 
-.right-column {
+.bottom-flex {
   width: 1000px;
   height: auto;
   display: flex;
