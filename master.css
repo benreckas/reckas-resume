@@ -138,13 +138,13 @@ a.logo:hover {
 p {
   font-family: "Roboto Slab", "Droid Serif", Georgia;
   margin: 0 0 0 0;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #353d44;
 }
 
 .about {
-  width: 100%;
-  margin: 40px 0 0 0;
+  height: 250px;
+  margin: 40px 10% 0 10%;
   display: flex;
   align-content: center;
   align-items: center;
@@ -153,10 +153,11 @@ p {
 
 section.about img {
   height: 250px;
-  width: 250px ;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  align-content: flex-start;
   margin-right: 50px;
   opacity: .8;
   -webkit-transition: all .7s;
@@ -174,47 +175,72 @@ section.about img:hover {
 */
 
 section.about div {
-  width: 500px;
+  height: 250px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  align-content: space-around;
+  align-content: center;
   justify-content: center;
 
 }
 
 section.about h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 25px 0;
 }
 
 .skills {
-  width: 100%;
-  margin: 40px 0 40px 0;
+  height: 300px;
+  margin: 0 10% 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills h3 {
+  margin: 0 0 25px 0;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills li {
+  font-size: 2em;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .education {
+  margin: 0 10%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: center;
   justify-content: center;
-  width: 100%;
 }
 
 .top-flex {
-  width: 1000px;
-  height: auto;
+  height: 160px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   margin: 40px 0 0 0;
 }
 
 .bottom-flex {
-  width: 1000px;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -232,38 +258,33 @@ section.about h3 {
 }
 
 .college img {
-  height: auto;
-  width: 250px;
-  margin-bottom: 5px;
-}
-
-.bitwise {
-  margin: 30px 0 0 300px;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 0 0;
 }
 
 .bitwise img {
-  height: auto;
-  width: 250px;
-  margin-bottom: 15px;
+  height: 130px;
+  width: auto;
 }
 
 .codeschool {
-  width: 1000px;
-  height: auto;
-  margin: -50px 0 0 0;
+  width: auto;
+  height: 700px;
+  margin: -30px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  align-content: center;
+  align-content: flex-start;
 }
 
 .codeschool img {
   width: 250px;
   height: auto;
   padding: 5px 0 0 0;
-  margin: 0 375px 0 375px;
+  margin: 0 100% 0 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -272,14 +293,14 @@ section.about h3 {
 }
 
 .badges {
-  width: 1000px;
-  height: auto;
+  width: auto;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .badges img {
