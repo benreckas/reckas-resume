@@ -1,0 +1,345 @@
+/*
+Color Palette:
+Primary 1: #353d44
+Primary 2: #df4300
+Black: #242520
+Gray: #d5d4d4
+White: #f8f7f3
+*/
+
+html body main h1 h2 h3 h4 ul li nav p section div{
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  display: flex;
+}
+
+body {
+  background-color: #e3e3e3;
+  margin: 20px 0 20px 0;
+  padding: 0;
+}
+
+header {
+  background-color: #353d44;
+  padding: 25px 0 25px 0;
+  border-bottom: 3px solid #777777;
+  border-top: 3px solid #777777;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+header a {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+header h1 {
+  margin: 0;
+  display: flex;
+}
+
+header h2 {
+  margin: 0;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  color: #f8f7f3;
+  margin-right: 40px;
+  font-size: 1.4em;
+  display: inline;
+  font-family: "Langdon", Helvetica;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  display: flex;
+}
+
+nav li:hover {
+  opacity: .5;
+}
+
+nav ul {
+  display: flex;
+}
+
+h1 {
+  font-family: "Langdon", Helvetica;
+  font-size: 5em;
+  font-kerning: none;
+  line-height: .8em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-family: "Langdon", Helvetica;
+  font-size: 2.1em;
+  font-kerning: none;
+  margin-top: -10px;
+  line-height: .8em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.3em;
+  color: #353d44;
+  font-family: "Langdon", Helvetica;
+  font-kerning: none;
+  line-height: .8em;
+  margin: 0 0 0 0;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-kerning: none;
+  line-height: .8em;
+  margin: 15px 0 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+li {
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: center;
+  list-style: none;
+}
+
+footer {
+  background-color: #353d44;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0 25px 0;
+  margin: 40px 0 0 0;
+  border-bottom: 3px solid #777777;
+  border-top: 3px solid #777777;
+}
+
+a.logo {
+  color: #f8f7f3;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+/*
+a.logo:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+*/
+p {
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  margin: 0 0 0 0;
+  line-height: 1.7;
+  color: #353d44;
+}
+
+.about {
+  height: 250px;
+  margin: 40px 10% 0 10%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+section.about img {
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  margin-right: 50px;
+  opacity: .8;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+  border: 3px solid #777777;
+}
+
+/*
+section.about img:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+*/
+
+section.about div {
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+
+}
+
+section.about h3 {
+  margin: 0 0 25px 0;
+}
+
+.skills {
+  height: 300px;
+  margin: 0 10% 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills h3 {
+  margin: 0 0 25px 0;
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills li {
+  font-size: 2em;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.education {
+  margin: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+}
+
+.top-flex {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin: 40px 0 0 0;
+}
+
+.bottom-flex {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin: 40px 0 0 0;
+}
+
+.college p {
+  color: #353d44;
+  font-family: "Roboto Slab", "Droid Serif", Georgia;
+  font-size: 1em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.college img {
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 0 0;
+}
+
+.bitwise img {
+  height: 130px;
+  width: auto;
+}
+
+.codeschool {
+  width: auto;
+  height: 700px;
+  margin: -30px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.codeschool img {
+  width: 250px;
+  height: auto;
+  padding: 5px 0 0 0;
+  margin: 0 100% 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.badges {
+  width: auto;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.badges img {
+  width: 100px;
+  height: 100px;
+  margin: 40px 40px 0 40px;
+  padding: 0 0 0 0;
+  opacity: .8;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  border-radius: 50%;
+}
+
+.badges img:hover {
+  transform: scale(1.7) rotate(3deg);
+  opacity: 1;
+  box-shadow: 0 0 10px #777777;
+}
