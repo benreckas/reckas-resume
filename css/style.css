@@ -1,38 +1,48 @@
 /*
 Color Palette:
-Primary 1: #353d44
+Primary 1: #rgba(52, 60, 67, 1)
 Primary 2: #df4300
 Black: #242520
 Gray: #d5d4d4
 White: #f8f7f3
 */
 
-html body main h1 h2 h3 h4 ul li nav p section div{
+/* Variables */
+
+:root {
+  --color-one: rgba(35, 35, 35, 1);
+  --color-two: rgba(223, 37, 55, 1); 
+  --color-three: rgba(239, 241, 236, 1); 
+}
+
+
+/* Element Defaults */
+
+html {
+  padding: 0;
+  margin: 0;
   width: 100%;
-  height: 100%;
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-  display: flex;
+}
+
+html body main h1 h2 h3 h4 ul li nav p section div {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%; /* Set 1em = 10px */
 }
 
 body {
   background-color: #e3e3e3;
-  margin: 20px 0 20px 0;
-  padding: 0;
 }
 
 header {
-  background-color: #353d44;
+  background-color: var(--color-one);
   width: 100%;
   text-align: center;
   padding: 25px 0 25px 0;
-  border-bottom: 3px solid #777777;
-  border-top: 3px solid #777777;
 }
 
 nav {
-  margin: 25px 0 0 0;
-  padding: 0 0 0 0;
+  margin-top: 25px;
   width: 100%;
 }
 
@@ -59,6 +69,7 @@ h1 {
   margin-bottom: 0px;
   font-kerning: none;
   line-height: .8em;
+  color: var(--color-three);
 }
 
 a {
@@ -73,6 +84,7 @@ h2 {
   margin-top: -10px;
   margin-bottom: 0px;
   line-height: .8em;
+  color: var(--color-two);
 }
 
 h3 {
