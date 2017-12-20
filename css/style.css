@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab');
 
 :root {
-  --color-one: rgba(35, 35, 35, .95);
+  --color-one: rgba(35, 35, 35, 1);
   --color-two: rgba(250, 62, 26, 1); 
   --color-three: rgba(239, 241, 236, 1);
   --fonts-one: 'Roboto Condensed', Sans-Serif;;
@@ -350,12 +350,30 @@ section.about h3 {
   width: 100%;
 }
 
-.slideshow-container h2 {
+.slideshow-text {
   position: absolute;
-  font-family: var(--fonts-one);
-  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.mySlides img {
+.slideshow-text h1 {
+  width: 100%;
+  font-family: var(--fonts-one);
+  font-size: 7.2em;
+  text-align: center;
+  color: var(--color-three);
+}
+
+.slideshow-text h2 {
+  width: 100%;
+  font-family: var(--fonts-one);
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--color-three);
+}
+
+.slides img {
   max-width: 100%;
+  /* display: none; */
 }
