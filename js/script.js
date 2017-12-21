@@ -1,53 +1,59 @@
+// DOM Queries
+const slides = document.getElementsByClassName("slides");
+const dots = document.getElementsByClassName("dot");
+const leftArrowIcon = document.querySelector('.fa-angle-left');
+const rightArrowIcon = document.querySelector('.fa-angle-right');
+const pauseIcon = document.querySelector('.fa-pause');
+const playIcon = document.querySelector('.fa-play');
 
-// const arrows = document.querySelectorAll(".arrows");
+// Event Listeners
+leftArrowIcon.addEventListener('click', prev);
+rightArrowIcon.addEventListener('click', next);
+pauseIcon.addEventListener('click', pause);
+playIcon.addEventListener('click', play);
 
-function showSlides () {
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");    
-    let slideIndex = 0;
+// Carousel
+let slideIndex = 0;
+let timer;
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; 
-    };
-
-    slideIndex++;
-    // if (slideIndex > slides.length) {slideIndex = 1} 
-    // for (i = 0; i < dots.length; i++) {
-    //     dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    slides[slideIndex-1].style.display = "block";  
-    // dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); //5 Sec
+// Previous Slide
+function prev(e) {
+    console.log('prev', slideIndex);
+    clearInterval(timer);
+    slideIndex === 0 ? slideIndex = slides.length - 1 : slideIndex--;
+    carousel();
 };
 
-showSlides();
+// Next Slide
+function next(e) {
+    console.log('next', slideIndex);
+    clearInterval(timer);
+    slideIndex === slides.length - 1 ? slideIndex = 0 : slideIndex++;
+    console.log(slideIndex);
+    carousel();
+};
 
+function pause(e) {
+    clearInterval(timer);
+    pauseIcon.classList.add('hidden');
+    playIcon.classList.remove('hidden');
+};
 
-// Home Page Carousel
+function play(e) {
+    carousel();
+    pauseIcon.classList.remove('hidden');
+    playIcon.classList.add('hidden');
+}
 
+// Change Carousel Attributes
+const carousel = () => {
 
-// Establish a counter for the slide index, then run the showSlides function. 
-// var slideIndex = 0;
-// showSlides();
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.add('hidden');
+    }
+    slides[slideIndex].classList.remove('hidden');
+    timer = setInterval(next, 6000);
+};
 
-// function showSlides() {
-    
-//     var i;
-//     // Establish variables for DOM elements
-//     var slides = document.getElementsByClassName("mySlides");
-//     var dots = document.getElementsByClassName("dot");
-//     // For loop to go through the carousel images.
-//     // If slide index is greater than 0 but less than the total index number of slides run the function.
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none"; 
-//     }
-//     slideIndex++;
-//     // 
-//     if (slideIndex > slides.length) {slideIndex = 1} 
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     }
-//     slides[slideIndex-1].style.display = "block";  
-//     dots[slideIndex-1].className += " active";
-//     setTimeout(showSlides, 3000); // Change image every 3 seconds
-// }
+// Run Functions on Page Load
+carousel();
