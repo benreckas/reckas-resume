@@ -1,15 +1,16 @@
 /* Variables */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Slab');
 
+/* Variables */
 :root {
-  --color-one: rgba(35, 35, 35, .9);
+  --color-one: rgba(35, 35, 35, 1);
   --color-two: rgba(250, 62, 26, 1); 
   --color-three: rgba(239, 241, 236, 1);
   --fonts-one: 'Roboto Condensed', Sans-Serif;;
   --fonts-two: 'Roboto Slab', Serif;
 }
-
 
 /* Element Defaults */
 
@@ -32,7 +33,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100px;
   display: flex;
@@ -99,7 +100,7 @@ a {
 h3 {
   text-align: center;
   font-size: 2.3em;
-  color: #353d44;
+  color: var(--color-one);
   font-family: "Langdon", Helvetica;
   font-kerning: none;
   line-height: .8em;
@@ -132,27 +133,14 @@ li {
 }
 
 footer {
+  position: relative;
   background-color: var(--color-one);
   width: 100%;
   height: 75px;
   text-align: center;
-  /* padding: 25px 0 25px 0; */
-  /* margin: 40px 0 0 0; */
-}
-
-a.logo {
-  color: #f8f7f3;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-}
-
-a.logo:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -162,246 +150,74 @@ p {
   color: #353d44;
 }
 
-.about {
-  height: 250px;
-  margin: 40px 10% 0 10%;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
+/* Carousel */
 
-section.about img {
-  height: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: flex-start;
-  margin-right: 50px;
-  opacity: .8;
-  -webkit-transition: all .7s;
-  -moz-transition: all .7s;
-  -o-transition: all .7s;
-  transition: all .7s;
-  border: 3px solid #777777;
-}
-
-/*
-section.about img:hover {
-  transform: scale(1.02);
-  opacity: 1;
-}
-*/
-
-section.about div {
-  height: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-
-}
-
-section.about h3 {
-  margin: 0 0 25px 0;
-}
-
-.skills {
-  height: 300px;
-  margin: 0 10% 0 10%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills h3 {
-  margin: 0 0 25px 0;
-}
-
-.skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills li {
-  font-size: 2em;
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.education {
-  margin: 0 10%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: center;
-  justify-content: center;
-}
-
-.top-flex {
-  height: 160px;
+.carousel-container {
+  position: relative;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-  margin: 40px 0 0 0;
 }
 
-.bottom-flex {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  margin: 40px 0 0 0;
-}
-
-.college p {
-  color: #353d44;
-  font-family: "Roboto Slab", "Droid Serif", Georgia;
-  font-size: 1em;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.college img {
-  height: 150px;
-  margin-bottom: 20px;
-  padding: 0 0;
-}
-
-.bitwise img {
-  height: 130px;
-  width: auto;
-}
-
-.codeschool {
-  width: auto;
-  height: 700px;
-  margin: -30px 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
-.codeschool img {
-  width: 250px;
-  height: auto;
-  padding: 5px 0 0 0;
-  margin: 0 100% 0 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: center;
-}
-
-.badges {
-  width: auto;
-  height: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
-.badges img {
-  width: 100px;
-  height: 100px;
-  margin: 40px 40px 0 40px;
-  padding: 0 0 0 0;
-  opacity: .8;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
-  border-radius: 50%;
-}
-
-.badges img:hover {
-  transform: scale(1.7) rotate(3deg);
-  opacity: 1;
-  box-shadow: 0 0 10px #777777;
-}
-
-.slideshow-container {
+.slides {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
   width: 100%;
-}
-
-.slideshow-text {
-  position: relative;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  font-weight: bolder;
+  align-items: center;
 }
 
-.slideshow-text h1 {
+.carousel-text {
+  position: absolute;
+  z-index: 1;
+  text-shadow: 0 0 3px var(--color-one);
+}
+
+.carousel-text h1 {
   width: 100%;
   font-family: var(--fonts-one);
   font-size: 7.2em;
   text-align: center;
+  font-weight: lighter;
   color: var(--color-three);
 }
 
-.slideshow-text h2 {
+.carousel-text h2 {
   width: 100%;
   font-family: var(--fonts-one);
-  font-size: 2.5em;
+  font-size: 4.5em;
   text-align: center;
+  font-weight: lighter;
   color: var(--color-three);
 }
 
 .slides img {
-  position: relative;
   max-width: 100%;
-  z-index: -1;
 }
 
-.slideshow-container i {
-  color: var(--color-two);
+.carousel-container i {
   position: absolute;
+  z-index: 1;
+  color: var(--color-two);
   transition: all .6s;
 }
 
-.slideshow-container i:hover {
+.carousel-container i:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
 .fa-pause, .fa-play {
-  font-size: 2em;
+  font-size: 1.8em;
   bottom: 0;
   right: 0;
   margin: 0 20px 20px 0;
 }
 
 .fa-angle-left {
-  font-size: 4em;
   left: 0;
+  font-size: 4em;
   margin-left: 20px;
 }
 
@@ -413,4 +229,28 @@ section.about h3 {
 
 .hidden { 
   display: none;
+}
+
+.welcome {
+  width: 60%;
+  margin: 25px auto 25px auto;
+}
+
+.welcome h2, .welcome p {
+  text-align: center;
+  text-transform: none;
+  color: var(--color-one);
+  font-family: var(--fonts-two);
+}
+
+.footer i {
+  color: rgba(239, 241, 236, .6);
+  font-size: 2.5em;
+  margin-right: 30px;
+  transition: all .6s;
+  cursor: pointer;
+}
+
+.footer i:hover {
+  color: var(--color-three);
 }
