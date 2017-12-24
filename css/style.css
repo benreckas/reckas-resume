@@ -1,0 +1,243 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Slab');
+
+/* Variables */
+:root {
+  --color-one: rgba(35, 35, 35, 1);
+  --color-two: rgba(250, 62, 26, 1);
+  --color-three: rgba(239, 241, 236, 1);
+  --fonts-one: 'Roboto Condensed', Sans-Serif;;
+  --fonts-two: 'Roboto Slab', Serif;
+}
+
+/* Element Defaults */
+
+body {
+  width: 100%;
+  font-size: 62.5%; /* Set 1em = 10px */
+}
+
+body, main, h1, h2, h3, h4, ul, li, nav, p, section, div {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-three);
+  font-family: var(--fonts-one);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--color-one);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+  color: var(--color-one);
+  font-family: var(--fonts-two);
+  font-size: 1.8em;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+em {
+  color: var(--color-two);
+}
+
+/* Header */
+header {
+  background-color: var(--color-one);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacing-container {
+  height: 100px;
+  width: 100%;
+}
+
+.header-text {
+  margin-left: 20px;
+}
+
+  /* Nav */
+  nav li {
+    color: var(--color-three);
+    font-family: var(--fonts-one);
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: .5px;
+    display: inline;
+    margin: 0 20px;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+  }
+
+  nav li:hover {
+    color: var(--color-two);
+  }
+
+  .nav-breadcrumb {
+    border-bottom: 2px solid var(--color-two);
+  }
+/* Header End */
+
+/* Carousel */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-text {
+  position: absolute;
+  z-index: 1;
+  text-shadow: 0 0 3px var(--color-one);
+}
+
+.carousel-text h1 {
+  width: 100%;
+  font-family: var(--fonts-one);
+  font-size: 10em;
+  text-align: center;
+  font-weight: lighter;
+  color: var(--color-three);
+}
+
+.carousel-text h2 {
+  width: 100%;
+  font-family: var(--fonts-one);
+  font-size: 4em;
+  text-align: center;
+  font-weight: lighter;
+  color: var(--color-three);
+}
+
+.slides img {
+  max-width: 100%;
+}
+
+.carousel-container i {
+  position: absolute;
+  z-index: 1;
+  color: var(--color-two);
+  transition: all .6s;
+}
+
+.carousel-container i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.fa-pause, .fa-play {
+  font-size: 1.8em;
+  bottom: 0;
+  right: 0;
+  margin: 0 20px 20px 0;
+}
+
+.fa-angle-left {
+  left: 0;
+  font-size: 4em;
+  margin-left: 20px;
+}
+
+.fa-angle-right {
+  font-size: 4em;
+  right: 0;
+  margin-right: 20px;
+}
+/* Carousel End */
+
+/* Welcome */
+.welcome {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.welcome h2, .welcome p {
+  text-align: center;
+  text-transform: none;
+  color: var(--color-one);
+  font-family: var(--fonts-two);
+}
+
+.welcome p {
+  text-align: justify;
+  margin-top: 10px;
+}
+/* Welcome End */
+
+/* Footer */
+footer {
+  position: relative;
+  background-color: var(--color-one);
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer i {
+  color: rgba(239, 241, 236, .6);
+  font-size: 2.5em;
+  margin-right: 30px;
+  transition: all .6s;
+  cursor: pointer;
+}
+
+.footer i:hover {
+  color: var(--color-three);
+}
+/* Footer End */
+
+/* Toggled on Elements in JavaScript */
+.hidden { 
+  display: none;
+}
+
+/* Animation */
+
+/* Media Queries */
