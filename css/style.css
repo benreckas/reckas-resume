@@ -1,12 +1,10 @@
-/* Variables */
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Slab');
 
 /* Variables */
 :root {
   --color-one: rgba(35, 35, 35, 1);
-  --color-two: rgba(250, 62, 26, 1); 
+  --color-two: rgba(250, 62, 26, 1);
   --color-three: rgba(239, 241, 236, 1);
   --fonts-one: 'Roboto Condensed', Sans-Serif;;
   --fonts-two: 'Roboto Slab', Serif;
@@ -16,20 +14,59 @@
 
 body {
   width: 100%;
-  margin: 0px;
-}
-
-body main h1 h2 h3 h4 ul li nav p section div {
-  padding: 0px;
-  margin: 0px;
   font-size: 62.5%; /* Set 1em = 10px */
 }
 
+body, main, h1, h2, h3, h4, ul, li, nav, p, section, div {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-three);
+  font-family: var(--fonts-one);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2em;
+  color: var(--color-one);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p {
+  color: var(--color-one);
+  font-family: var(--fonts-two);
+  font-size: 1.8em;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+em {
+  color: var(--color-two);
+}
 
 /* Header */
 header {
   background-color: var(--color-one);
-  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,27 +83,8 @@ header {
   width: 100%;
 }
 
-h1 {
-  color: var(--color-three);
-  font-family: var(--fonts-one);
-  font-size: 3.4em;
-  font-weight: lighter;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-h2 {
-  color: var(--color-three);
-  font-family: var(--fonts-one);
-  font-size: 1.4em;
-  text-transform: uppercase;
-  margin: -5px 0 0 0;
-}
-
 .header-text {
-  padding-left: 20px;
-  display: flex;
-  flex-wrap: none;
+  margin-left: 20px;
 }
 
   /* Nav */
@@ -74,7 +92,7 @@ h2 {
     color: var(--color-three);
     font-family: var(--fonts-one);
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 2em;
     letter-spacing: .5px;
     display: inline;
     margin: 0 20px;
@@ -91,64 +109,7 @@ h2 {
   .nav-breadcrumb {
     border-bottom: 2px solid var(--color-two);
   }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h3 {
-  text-align: center;
-  font-size: 2.3em;
-  color: var(--color-one);
-  font-family: "Langdon", Helvetica;
-  font-kerning: none;
-  line-height: .8em;
-  margin: 0 0 0 0;
-}
-
-h4 {
-  text-align: center;
-  font-size: 1.2em;
-  color: #353d44;
-  font-family: "Roboto Slab", "Droid Serif", Georgia;
-  font-kerning: none;
-  line-height: .8em;
-  margin: 15px 0 10px 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
-
-li {
-  color: #353d44;
-  font-family: "Roboto Slab", "Droid Serif", Georgia;
-  font-size: 1em;
-  line-height: 1.7;
-  text-align: center;
-  list-style: none;
-}
-
-footer {
-  position: relative;
-  background-color: var(--color-one);
-  width: 100%;
-  height: 75px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-p {
-  font-family: "Roboto Slab", "Droid Serif", Georgia;
-  margin: 0 0 0 0;
-  line-height: 1.7;
-  color: #353d44;
-}
+/* Header End */
 
 /* Carousel */
 
@@ -177,7 +138,7 @@ p {
 .carousel-text h1 {
   width: 100%;
   font-family: var(--fonts-one);
-  font-size: 7.2em;
+  font-size: 10em;
   text-align: center;
   font-weight: lighter;
   color: var(--color-three);
@@ -186,7 +147,7 @@ p {
 .carousel-text h2 {
   width: 100%;
   font-family: var(--fonts-one);
-  font-size: 4.5em;
+  font-size: 4em;
   text-align: center;
   font-weight: lighter;
   color: var(--color-three);
@@ -226,14 +187,12 @@ p {
   right: 0;
   margin-right: 20px;
 }
+/* Carousel End */
 
-.hidden { 
-  display: none;
-}
-
+/* Welcome */
 .welcome {
   width: 60%;
-  margin: 25px auto 25px auto;
+  margin: 50px auto;
 }
 
 .welcome h2, .welcome p {
@@ -241,6 +200,24 @@ p {
   text-transform: none;
   color: var(--color-one);
   font-family: var(--fonts-two);
+}
+
+.welcome p {
+  text-align: justify;
+  margin-top: 10px;
+}
+/* Welcome End */
+
+/* Footer */
+footer {
+  position: relative;
+  background-color: var(--color-one);
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer i {
@@ -254,3 +231,13 @@ p {
 .footer i:hover {
   color: var(--color-three);
 }
+/* Footer End */
+
+/* Toggled on Elements in JavaScript */
+.hidden { 
+  display: none;
+}
+
+/* Animation */
+
+/* Media Queries */
