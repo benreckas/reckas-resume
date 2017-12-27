@@ -18,7 +18,6 @@ let timer;
 
 // Previous Slide
 function prev(e) {
-    console.log('prev', slideIndex);
     clearInterval(timer);
     slideIndex === 0 ? slideIndex = slides.length - 1 : slideIndex--;
     carousel();
@@ -26,10 +25,12 @@ function prev(e) {
 
 // Next Slide
 function next(e) {
-    console.log('next', slideIndex);
+    if(pauseIcon.classList.contains('hidden') === true) {
+        pauseIcon.classList.remove('hidden');
+        playIcon.classList.add('hidden');
+    };
     clearInterval(timer);
     slideIndex === slides.length - 1 ? slideIndex = 0 : slideIndex++;
-    console.log(slideIndex);
     carousel();
 };
 
