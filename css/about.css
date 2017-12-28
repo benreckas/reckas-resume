@@ -1,179 +1,169 @@
+h2 {
+  color: var(--color-one);
+}
+
 .about {
-    height: 250px;
-    margin: 40px 10% 0 10%;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-  }
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
   
-  section.about img {
-    height: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-content: flex-start;
-    margin-right: 50px;
-    opacity: .8;
-    -webkit-transition: all .7s;
-    -moz-transition: all .7s;
-    -o-transition: all .7s;
-    transition: all .7s;
-    border: 3px solid #777777;
-  }
+.about img {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  margin-right: 50px;
+  opacity: .8;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+  border: 3px solid #777777;
+}
+
+.about-p {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center; 
+}
   
-  /*
-  section.about img:hover {
-    transform: scale(1.02);
+.about-p h2 {
+  margin-bottom: 20px;
+}
+
+.about-p p {
+  text-align: justify;
+}
+  
+.skills {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+  
+.skills h2 {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
+.skill {
+  position: relative;
+  margin: 20px;
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.skill h3 {
+  width: 100%;
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+.skill i {
+  pointer-events: none;
+}
+
+.skill-lvl {
+  color: var(--color-one);
+  position: absolute;
+  top: 5%;
+  font-size: 6em;
+  pointer-events: none;
+}
+
+.disclaimer {
+  color: rgba(0, 0, 0, .6);
+  font-size: .6em;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+  
+.education {
+  width: 80%;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+}
+
+.education h2 {
+  margin-bottom: 25px;
+}
+
+.devicon {
+  font-size: 10em;
+}
+
+/* Animation */
+
+.flip {
+  animation-duration: .6s;
+  animation-name: flip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes flip {
+  0% {
     opacity: 1;
+    transform: rotateY(0deg) scale(1);
   }
-  */
-  
-  section.about div {
-    height: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  
+  100% {
+    opacity: .3;
+    transform: rotateY(180deg) scale(.9);
   }
-  
-  section.about h3 {
-    margin: 0 0 25px 0;
+}
+
+.unflip {
+  animation-duration: .45s;
+  animation-name: unflip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes unflip {
+  0% {
+    opacity: .3;
+    transform: rotateY(180deg) scale(.9);
   }
-  
-  .skills {
-    height: 300px;
-    margin: 0 10% 0 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .skills h3 {
-    margin: 0 0 25px 0;
-  }
-  
-  .skills ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .skills li {
-    font-size: 2em;
-    width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-  
-  .education {
-    margin: 0 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: center;
-    justify-content: center;
-  }
-  
-  .top-flex {
-    height: 160px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    margin: 40px 0 0 0;
-  }
-  
-  .bottom-flex {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin: 40px 0 0 0;
-  }
-  
-  .college p {
-    color: #353d44;
-    font-family: "Roboto Slab", "Droid Serif", Georgia;
-    font-size: 1em;
-    line-height: 1.2;
-    text-align: center;
-  }
-  
-  .college img {
-    height: 150px;
-    margin-bottom: 20px;
-    padding: 0 0;
-  }
-  
-  .bitwise img {
-    height: 130px;
-    width: auto;
-  }
-  
-  .codeschool {
-    width: auto;
-    height: 700px;
-    margin: -30px 0 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-  }
-  
-  .codeschool img {
-    width: 250px;
-    height: auto;
-    padding: 5px 0 0 0;
-    margin: 0 100% 0 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-  }
-  
-  .badges {
-    width: auto;
-    height: 600px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-  }
-  
-  .badges img {
-    width: 100px;
-    height: 100px;
-    margin: 40px 40px 0 40px;
-    padding: 0 0 0 0;
-    opacity: .8;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    border-radius: 50%;
-  }
-  
-  .badges img:hover {
-    transform: scale(1.7) rotate(3deg);
+  100% {
     opacity: 1;
-    box-shadow: 0 0 10px #777777;
+    transform: rotateY(0deg) scale(1);
   }
+}
+
+.value-flip {
+  animation-duration: .6s;
+  animation-name: value-flip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes value-flip {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
