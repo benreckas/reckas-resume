@@ -60,7 +60,7 @@ h2 {
 
 .skill {
   position: relative;
-  margin: 20px;
+  margin: 10px;
   width: 150px;
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +133,7 @@ h2 {
 }
 
 .unflip {
-  animation-duration: .45s;
+  animation-duration: .6s;
   animation-name: unflip;
   animation-fill-mode: forwards;
   animation-direction: normal;
