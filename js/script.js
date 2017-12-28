@@ -1,6 +1,5 @@
 // DOM Queries
-const slides = document.getElementsByClassName("slides");
-const dots = document.getElementsByClassName("dot");
+const slides = document.getElementsByClassName('slides');
 const leftArrowIcon = document.querySelector('.fa-angle-left');
 const rightArrowIcon = document.querySelector('.fa-angle-right');
 const pauseIcon = document.querySelector('.fa-pause');

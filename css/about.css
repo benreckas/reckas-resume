@@ -65,6 +65,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  cursor: pointer;
 }
 
 .skill h3 {
@@ -77,15 +78,6 @@ h2 {
   position: absolute;
   top: 5%;
   font-size: 6em;
-}
-
-.skill i {
-  transition: all .6s;
-}
-
-.skill i:hover {
-  transform: scale(1.1) rotateY(180deg);
-  opacity: .3;
 }
 
 .disclaimer {
@@ -112,4 +104,60 @@ h2 {
 
 .devicon {
   font-size: 10em;
+}
+
+/* Animation */
+
+.flip {
+  animation-duration: .4s;
+  animation-name: flip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes flip {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+  100% {
+    opacity: .3;
+    transform: rotateY(180deg) scale(.9);
+  }
+}
+
+.unflip {
+  animation-duration: .3s;
+  animation-name: unflip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes unflip {
+  0% {
+    opacity: .3;
+    transform: rotateY(180deg) scale(.9);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+.value-flip {
+  animation-duration: .4s;
+  animation-name: value-flip;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes value-flip {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
 }

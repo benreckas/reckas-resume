@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto+Condensed|Roboto+Slab');
 
 /* Variables */
 :root {
@@ -89,6 +89,9 @@ header {
 
 .header-text {
   margin-left: 20px;
+  position: relative;
+  animation-duration: 1.2s;
+  animation-name: headerIn;
 }
 
   /* Nav */
@@ -104,6 +107,9 @@ header {
     -moz-transition: all .4s;
     -o-transition: all .4s;
     transition: all .4s;
+    position: relative;
+    animation-duration: 1.2s;
+    animation-name: headerIn;
   }
 
   nav li:hover {
@@ -145,20 +151,19 @@ header {
 
   .carousel-text h1 {
     width: 100%;
-    font-family: var(--fonts-one);
+    font-family: 'Oswald';
     font-size: 10em;
     text-align: center;
-    font-weight: bolder;
     color: var(--color-three);
   }
 
   .carousel-text h2 {
     width: 100%;
-    font-family: var(--fonts-one);
-    font-size: 4em;
+    font-family: 'Oswald';
+    font-size: 4.2em;
     text-align: center;
-    font-weight: lighter;
     color: var(--color-three);
+    margin-top: -30px;
   }
 
   /* Carousel Buttons */
@@ -243,5 +248,16 @@ footer {
 }
 
 /* Animation */
+
+@keyframes headerIn {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
 
 /* Media Queries */
