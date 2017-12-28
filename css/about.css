@@ -71,6 +71,11 @@ h2 {
 .skill h3 {
   width: 100%;
   margin-top: 10px;
+  pointer-events: none;
+}
+
+.skill i {
+  pointer-events: none;
 }
 
 .skill-lvl {
@@ -78,6 +83,7 @@ h2 {
   position: absolute;
   top: 5%;
   font-size: 6em;
+  pointer-events: none;
 }
 
 .disclaimer {
@@ -109,7 +115,7 @@ h2 {
 /* Animation */
 
 .flip {
-  animation-duration: .4s;
+  animation-duration: .6s;
   animation-name: flip;
   animation-fill-mode: forwards;
   animation-direction: normal;
@@ -127,7 +133,7 @@ h2 {
 }
 
 .unflip {
-  animation-duration: .3s;
+  animation-duration: .45s;
   animation-name: unflip;
   animation-fill-mode: forwards;
   animation-direction: normal;
@@ -145,7 +151,7 @@ h2 {
 }
 
 .value-flip {
-  animation-duration: .4s;
+  animation-duration: .6s;
   animation-name: value-flip;
   animation-fill-mode: forwards;
   animation-direction: normal;
