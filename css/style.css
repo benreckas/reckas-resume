@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto+Condensed|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Condensed|Roboto+Slab');
 
 /* Variables */
 :root {
@@ -112,13 +112,30 @@ header {
     animation-name: headerIn;
   }
 
-  nav li:hover {
-    color: var(--color-two);
-  }
+  nav li:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-two);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
 
-  .nav-breadcrumb {
-    border-bottom: 2px solid var(--color-two);
-  }
+nav li:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-breadcrumb {
+  border-bottom: 2px solid var(--color-two);
+}
 /* Header End */
 
 /* Carousel */
@@ -146,7 +163,7 @@ header {
   .carousel-text {
     position: absolute;
     z-index: 1;
-    text-shadow: 0 0 3px var(--color-one);
+    text-shadow: 0 0 20px var(--color-one);
   }
 
   .carousel-text h1 {
@@ -160,7 +177,7 @@ header {
   .carousel-text h2 {
     width: 100%;
     font-family: 'Oswald';
-    font-size: 4.2em;
+    font-size: 4.1em;
     text-align: center;
     color: var(--color-three);
     margin-top: -30px;
@@ -248,16 +265,5 @@ footer {
 }
 
 /* Animation */
-
-@keyframes headerIn {
-  from {
-    opacity: 0;
-    top: -100px;
-  }
-  to {
-    opacity: 1;
-    top: 0px;
-  }
-}
 
 /* Media Queries */
