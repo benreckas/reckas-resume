@@ -306,9 +306,12 @@ header {
 
 .welcome h2, .welcome p {
   text-align: center;
-  text-transform: none;
   color: var(--color-one);
   font-family: var(--fonts-two);
+}
+
+.welcome h2 {
+  font-family: var(--fonts-one);
 }
 
 .welcome p {
