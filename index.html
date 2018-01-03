@@ -17,15 +17,25 @@
         </div>
         <!-- Nav Start -->
         <nav>
-            <ul>
-                <li><a href="index.html" class="nav-breadcrumb">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="my-work.html">My Work</a></li>
+            <div id ="menu" class="menu open-icon">
+                <div class="hm hm-top"></div>
+                <div class="hm hm-mid"></div>
+                <div class="hm hm-bot"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-breadcrumb">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="my-work.html">My Work</a></li>
             </ul>
         </nav>
         <!-- Nav End -->
     </header>
     <div class="spacing-container"></div>
+    <ul class="mobile-nav">
+        <a href="index.html"><li class="mobile-nav-item home-nav">Home</li></a>
+        <a href="about.html"><li class="mobile-nav-item about-nav">About</li></a>
+        <a href="my-work.html"><li class="mobile-nav-item work-nav">My Work</li></a>
+    </ul>
     <!-- Header End -->
     <!-- Carousel Start -->
     <div class="carousel-container">
@@ -70,6 +80,7 @@
         <a href="mailto:benreckas@gmail.com"><i class="fa fa-envelope-square" aria-hidden="true"></i></a>
     </footer>
     <!-- Footer End -->
+    <script src="js/menu.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
