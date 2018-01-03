@@ -338,187 +338,300 @@ footer {
 .footer i:hover {
   color: var(--color-three);
 }
+
+.footer .fa-envelope-square {
+  margin-right: 0;
+}
 /* Footer End */
 
-/* Toggled on Elements in JavaScript */
 .hidden { 
   display: none;
 }
 
 /* Animation */
-.aniMidOpen {
-	animation: aniMidOpen;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  /* Hamburger Icon Animation Start */
+  .aniMidOpen {
+    animation: aniMidOpen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniTopOpen {
-	animation: aniTopOpen;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  .aniTopOpen {
+    animation: aniTopOpen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniBotOpen {
-	animation: aniBotOpen;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  .aniBotOpen {
+    animation: aniBotOpen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniOpen {
-	animation: aniOpen;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-out;
-}
+  .aniOpen {
+    animation: aniOpen;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
 
-@keyframes aniMidOpen {
-	40% {
-    background-color: rgba(255, 255, 255, 1);
-	}
-	50% {
-		background-color: rgba(255, 255, 255, 0);
-	}
-	100% {
-		background-color: rgba(255, 255, 255, 0);
-	}
-}
+  @keyframes aniMidOpen {
+    40% {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    50% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
 
-@keyframes aniTopOpen {
-	0% {
-		transform: translate(0, 0);
-	}
-	50% {
-		transform: translate(0, 12.5px);
-		background-color: rgba(255, 255, 255, 1);
-	}
-	100% {
-		transform: translate(0, 12.5px) rotate(135deg);
-		background-color: rgba(250, 62, 26, .7);
-	}
-}
+  @keyframes aniTopOpen {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 12.5px);
+      background-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+      transform: translate(0, 12.5px) rotate(135deg);
+      background-color: rgba(250, 62, 26, .7);
+    }
+  }
 
-@keyframes aniBotOpen {
-	0% {
-		transform: translate(0, 25px);
-	}
-	50% {
-		transform: translate(0, 12.5px);
-		background-color: rgba(255, 255, 255, 1);
-	}
-	100%{
-		transform: translate(0, 12.5px) rotate(45deg);
-		background-color: rgba(250, 62, 26, 1);
-	}
-}
+  @keyframes aniBotOpen {
+    0% {
+      transform: translate(0, 25px);
+    }
+    50% {
+      transform: translate(0, 12.5px);
+      background-color: rgba(255, 255, 255, 1);
+    }
+    100%{
+      transform: translate(0, 12.5px) rotate(45deg);
+      background-color: rgba(250, 62, 26, 1);
+    }
+  }
 
-@keyframes aniOpen {
-	0% {
-		transform: rotate(0);
-	}
-	50% {
-		transform: rotate(0);
-	}
-	75% {
-		transform: rotate(270deg);
-	}
-	100% {
-		transform: rotate(180deg);
-	}
-}
+  @keyframes aniOpen {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
 
-.aniMidClose {
-	animation: aniMidClose;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  .aniMidClose {
+    animation: aniMidClose;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniTopClose {
-	animation: aniTopClose;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  .aniTopClose {
+    animation: aniTopClose;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniBotClose {
-	animation: aniBotClose;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in-out;
-}
+  .aniBotClose {
+    animation: aniBotClose;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
 
-.aniClose {
-	animation: aniClose;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-out;
-}
+  .aniClose {
+    animation: aniClose;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
 
-@keyframes aniMidClose {
-	0% {
-		background-color: rgba(255, 255, 255, 0);
-	}
-	50% {
-		background-color: rgba(255, 255, 255, 0);
-	}
-	60% {
-		background-color: rgba(255, 255, 255, 1);
-	}
-	100% {
-		background-color: rgba(255, 255, 255, 1);
-	}
-}
+  @keyframes aniMidClose {
+    0% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    50% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    60% {
+      background-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
 
-@keyframes aniTopClose {
-	0% {
-		transform: translate(0, 12.5px) rotate(135deg);
-		background-color: rgba(250, 62, 26, .7);
-	}
-	50% {
-		transform: translate(0, 12.5px) rotate(0);
-		background-color: rgba(255, 255, 255, 1);
-	}
-	100% {
-		transform: translate(0, 0);
-	}
-}
+  @keyframes aniTopClose {
+    0% {
+      transform: translate(0, 12.5px) rotate(135deg);
+      background-color: rgba(250, 62, 26, .7);
+    }
+    50% {
+      transform: translate(0, 12.5px) rotate(0);
+      background-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 
-@keyframes aniBotClose {
-	0% {
-		transform: translate(0, 12.5px) rotate(45deg);
-		background-color: rgba(250, 62, 26, 1);
-	}
-	50% {
-		transform: translate(0, 12.5px) rotate(0);
-		background-color: rgba(255, 255, 255, 1);
-	}
-	100%{
-		transform: translate(0, 25px);
-	}
-}
+  @keyframes aniBotClose {
+    0% {
+      transform: translate(0, 12.5px) rotate(45deg);
+      background-color: rgba(250, 62, 26, 1);
+    }
+    50% {
+      transform: translate(0, 12.5px) rotate(0);
+      background-color: rgba(255, 255, 255, 1);
+    }
+    100%{
+      transform: translate(0, 25px);
+    }
+  }
 
-@keyframes aniClose {
-	0% {
-		transform: rotate(180deg);
-	}
-	25% {
-		transform: rotate(270deg);
-	}
-	50% {
-		transform: rotate(-45deg);
-	}
-	60% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(0);
-	}
-}
+  @keyframes aniClose {
+    0% {
+      transform: rotate(180deg);
+    }
+    25% {
+      transform: rotate(270deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+    60% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  /* Hamburger Icon Animation End */
 
+  /* Mobile Nav Animation Start */
+  .aniHomeOpen {
+    animation: aniHomeOpen;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
 
+  .aniAboutOpen {
+    animation: aniAboutOpen;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
+
+  .aniWorkOpen {
+    animation: aniWorkOpen;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
+
+  @keyframes aniHomeOpen {
+    0% {
+      transform: translate(0, -55px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes aniAboutOpen {
+    0% {
+      transform: translate(0, -55px);
+    }
+    33% {
+      transform: translate(0, -55px);
+    }
+    100% {
+      transform: translate(0, 52px);
+    }
+  }
+
+  @keyframes aniWorkOpen {
+    0% {
+      transform: translate(0, -55px);
+    }
+    66% {
+      transform: translate(0, -55px);
+    }
+    100%{
+      transform: translate(0, 104px);
+    }
+  }
+
+  .aniHomeClose {
+    animation: aniHomeClose;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
+
+  .aniAboutClose {
+    animation: aniAboutClose;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
+
+  .aniWorkClose {
+    animation: aniWorkClose;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+  }
+
+  @keyframes aniHomeClose {
+    0% {
+      transform: translate(0, 0);
+    }
+    66% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -55px);
+    }
+  }
+
+  @keyframes aniAboutClose {
+    0% {
+      transform: translate(0, 52px);
+    }
+    33% {
+      transform: translate(0, 52px);
+    }
+    100% {
+      transform: translate(0, -55px);
+    }
+  }
+
+  @keyframes aniWorkClose {
+    0% {
+      transform: translate(0, 104px);
+    }
+    100%{
+      transform: translate(0, -55px);
+    }
+  }
+  /* Mobile Nav Animation End */
 /* Animation End */
 
 /* Media Queries Start */
@@ -575,119 +688,3 @@ footer {
   }
 }
 /* Media Queries End */
-
-
-
-
-
-
-
-
-
-.aniHomeOpen {
-	animation: aniHomeOpen;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-.aniAboutOpen {
-	animation: aniAboutOpen;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-.aniWorkOpen {
-	animation: aniWorkOpen;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-@keyframes aniHomeOpen {
-	0% {
-    transform: translate(0, -55px);
-	}
-	100% {
-    transform: translate(0, 0);
-	}
-}
-
-@keyframes aniAboutOpen {
-	0% {
-    transform: translate(0, -55px);
-	}
-	33% {
-    transform: translate(0, -55px);
-  }
-	100% {
-    transform: translate(0, 52px);
-	}
-}
-
-@keyframes aniWorkOpen {
-	0% {
-		transform: translate(0, -55px);
-	}
-	66% {
-		transform: translate(0, -55px);
-	}
-	100%{
-    transform: translate(0, 104px);
-	}
-}
-
-.aniHomeClose {
-	animation: aniHomeClose;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-.aniAboutClose {
-	animation: aniAboutClose;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-.aniWorkClose {
-	animation: aniWorkClose;
-	animation-duration: .6s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
-}
-
-@keyframes aniHomeClose {
-	0% {
-    transform: translate(0, 0);
-  }
-  66% {
-    transform: translate(0, 0);
-  }
-	100% {
-    transform: translate(0, -55px);
-	}
-}
-
-@keyframes aniAboutClose {
-	0% {
-    transform: translate(0, 52px);
-	}
-	33% {
-    transform: translate(0, 52px);
-  }
-	100% {
-    transform: translate(0, -55px);
-	}
-}
-
-@keyframes aniWorkClose {
-	0% {
-		transform: translate(0, 104px);
-	}
-	100%{
-    transform: translate(0, -55px);
-	}
-}
