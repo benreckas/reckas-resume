@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Oswald:500|Roboto+Condensed|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Condensed|Roboto+Slab');
 
 /* Variables */
 :root {
@@ -52,10 +52,6 @@ ul {
     list-style-type: none;
 }
 
-li {
-  
-}
-
 p {
   color: var(--color-one);
   font-family: var(--fonts-two);
@@ -74,7 +70,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   height: 100px;
   display: flex;
@@ -93,7 +89,6 @@ header {
   animation-duration: 1.2s;
   animation-name: headerIn;
 }
-
   /* Nav */
   nav li {
     color: var(--color-three);
@@ -112,13 +107,116 @@ header {
     animation-name: headerIn;
   }
 
-  nav li:hover {
-    color: var(--color-two);
+  nav li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-two);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  nav li:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 
   .nav-breadcrumb {
     border-bottom: 2px solid var(--color-two);
   }
+  /* Nav End */
+  /* Mobile Nav Start */
+  .mobile-nav {
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    z-index: 4;
+  }
+
+  .mobile-nav-item {
+    width: 100%;
+    color: var(--color-three);
+    font-family: var(--fonts-one);
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: .5px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--color-one);
+    transition: all .4s;
+    background-color: rgba(55, 55, 55, 1);
+    position: absolute;
+  }
+
+  .mobile-nav-item:hover {
+    background-color: var(--color-two);
+    cursor: pointer;
+  }
+
+  .home-nav {
+    z-index: 4;
+    transform: translate(0, -55px);
+  }
+
+  .about-nav {
+    z-index: 3;
+    transform: translate(0, -55px);
+  }
+
+  .work-nav {
+    z-index: 2;
+    transform: translate(0, -55px);
+  }
+
+  /* Mobile Nav End */
+  /* Hamburger Menu Start */
+  .menu {
+    display: none;
+    margin: 0 20px 0 0;
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .menu:hover {
+    cursor: pointer;
+  }
+  
+  .hm {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    width: 100%;
+    height: 4px;
+    border-radius: 1px;
+    transform-origin: center;
+  }
+  
+  .hm-mid {
+    transform: translate(0, 12.5px);
+    z-index: 4;
+  }
+  
+  .hm-top {
+    transform: translate(0, 0);
+    z-index: 3;
+  }
+  
+  .hm-bot {
+    transform: translate(0, 25px);
+    z-index: 2;
+  }
+
+  /* Hamburger Menu End */
 /* Header End */
 
 /* Carousel */
@@ -146,7 +244,7 @@ header {
   .carousel-text {
     position: absolute;
     z-index: 1;
-    text-shadow: 0 0 3px var(--color-one);
+    text-shadow: 0 0 20px var(--color-one);
   }
 
   .carousel-text h1 {
@@ -160,7 +258,7 @@ header {
   .carousel-text h2 {
     width: 100%;
     font-family: 'Oswald';
-    font-size: 4.2em;
+    font-size: 4.1em;
     text-align: center;
     color: var(--color-three);
     margin-top: -30px;
@@ -248,16 +346,348 @@ footer {
 }
 
 /* Animation */
+.aniMidOpen {
+	animation: aniMidOpen;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
 
-@keyframes headerIn {
-  from {
-    opacity: 0;
-    top: -100px;
+.aniTopOpen {
+	animation: aniTopOpen;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.aniBotOpen {
+	animation: aniBotOpen;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.aniOpen {
+	animation: aniOpen;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes aniMidOpen {
+	40% {
+    background-color: rgba(255, 255, 255, 1);
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+}
+
+@keyframes aniTopOpen {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(0, 12.5px);
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100% {
+		transform: translate(0, 12.5px) rotate(135deg);
+		background-color: rgba(250, 62, 26, .7);
+	}
+}
+
+@keyframes aniBotOpen {
+	0% {
+		transform: translate(0, 25px);
+	}
+	50% {
+		transform: translate(0, 12.5px);
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100%{
+		transform: translate(0, 12.5px) rotate(45deg);
+		background-color: rgba(250, 62, 26, 1);
+	}
+}
+
+@keyframes aniOpen {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+.aniMidClose {
+	animation: aniMidClose;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.aniTopClose {
+	animation: aniTopClose;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.aniBotClose {
+	animation: aniBotClose;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+.aniClose {
+	animation: aniClose;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+@keyframes aniMidClose {
+	0% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	50% {
+		background-color: rgba(255, 255, 255, 0);
+	}
+	60% {
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100% {
+		background-color: rgba(255, 255, 255, 1);
+	}
+}
+
+@keyframes aniTopClose {
+	0% {
+		transform: translate(0, 12.5px) rotate(135deg);
+		background-color: rgba(250, 62, 26, .7);
+	}
+	50% {
+		transform: translate(0, 12.5px) rotate(0);
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes aniBotClose {
+	0% {
+		transform: translate(0, 12.5px) rotate(45deg);
+		background-color: rgba(250, 62, 26, 1);
+	}
+	50% {
+		transform: translate(0, 12.5px) rotate(0);
+		background-color: rgba(255, 255, 255, 1);
+	}
+	100%{
+		transform: translate(0, 25px);
+	}
+}
+
+@keyframes aniClose {
+	0% {
+		transform: rotate(180deg);
+	}
+	25% {
+		transform: rotate(270deg);
+	}
+	50% {
+		transform: rotate(-45deg);
+	}
+	60% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+
+/* Animation End */
+
+/* Media Queries Start */
+@media (max-width: 1020px) { 
+  .welcome {
+    width: 80%;
   }
-  to {
-    opacity: 1;
-    top: 0px;
+
+  .carousel-text h1 {
+    font-size: 8em;
+  }
+
+  .carousel-text h2 {
+    font-size: 3.3em;
   }
 }
 
-/* Media Queries */
+@media (min-width: 701px) { 
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) { 
+  .carousel-text h1 {
+    font-size: 6em;
+  }
+
+  .carousel-text h2 {
+    font-size: 2.48em;
+    margin-top: -20px;
+  }
+
+  .carousel-container i {
+    font-size: 4em;
+  }
+
+  i.fa-pause, i.fa-play {
+    font-size: 2em;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) { 
+  .welcome {
+    width: 90%;
+  }
+}
+/* Media Queries End */
+
+
+
+
+
+
+
+
+
+.aniHomeOpen {
+	animation: aniHomeOpen;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+.aniAboutOpen {
+	animation: aniAboutOpen;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+.aniWorkOpen {
+	animation: aniWorkOpen;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+@keyframes aniHomeOpen {
+	0% {
+    transform: translate(0, -55px);
+	}
+	100% {
+    transform: translate(0, 0);
+	}
+}
+
+@keyframes aniAboutOpen {
+	0% {
+    transform: translate(0, -55px);
+	}
+	33% {
+    transform: translate(0, -55px);
+  }
+	100% {
+    transform: translate(0, 52px);
+	}
+}
+
+@keyframes aniWorkOpen {
+	0% {
+		transform: translate(0, -55px);
+	}
+	66% {
+		transform: translate(0, -55px);
+	}
+	100%{
+    transform: translate(0, 104px);
+	}
+}
+
+.aniHomeClose {
+	animation: aniHomeClose;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+.aniAboutClose {
+	animation: aniAboutClose;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+.aniWorkClose {
+	animation: aniWorkClose;
+	animation-duration: .6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(.68,.28,.44,.91);
+}
+
+@keyframes aniHomeClose {
+	0% {
+    transform: translate(0, 0);
+  }
+  66% {
+    transform: translate(0, 0);
+  }
+	100% {
+    transform: translate(0, -55px);
+	}
+}
+
+@keyframes aniAboutClose {
+	0% {
+    transform: translate(0, 52px);
+	}
+	33% {
+    transform: translate(0, 52px);
+  }
+	100% {
+    transform: translate(0, -55px);
+	}
+}
+
+@keyframes aniWorkClose {
+	0% {
+		transform: translate(0, 104px);
+	}
+	100%{
+    transform: translate(0, -55px);
+	}
+}
