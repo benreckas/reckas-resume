@@ -270,7 +270,9 @@ header {
     position: absolute;
     z-index: 1;
     color: var(--color-two);
+    --webkit-transition: all .6s;
     transition: all .6s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 
   .carousel-container i:hover {
