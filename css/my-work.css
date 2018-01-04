@@ -56,12 +56,6 @@ em {
 }
 
 /* Media Queries Start */
-/* @media (max-width: 1000px) { 
-    .listr, .clovis-coffee, .calculator {
-        height: 250px;
-    }
-} */
-
 @media only screen and (max-width: 1024px) {
     .listr, .clovis-coffee, .calculator {
         background-attachment: scroll;
@@ -74,8 +68,13 @@ em {
     .listr, .clovis-coffee, .calculator {
         height: 350px;
     }
+
     .project-text h3, p {
         width: 90%;
+    }
+
+    .project-text p {
+        text-align: left;
     }
 }
 
