@@ -1,6 +1,3 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Oswald:400|Roboto+Condensed|Roboto+Slab');
-
 /* Variables */
 :root {
   --color-one: rgba(35, 35, 35, 1);
@@ -331,7 +328,6 @@ header {
 
 /* Footer */
 footer {
-  position: relative;
   background-color: var(--color-one);
   width: 100%;
   height: 75px;
@@ -339,7 +335,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
 }
 
 .footer i {
@@ -718,6 +713,10 @@ footer {
 
   nav ul {
     display: none;
+  }
+
+  .welcome p {
+    text-align: left;
   }
 }
 
