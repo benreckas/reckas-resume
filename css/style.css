@@ -9,14 +9,20 @@
 
 /* Element Defaults */
 
-body {
-  width: 100%;
-  font-size: 62.5%; /* Set 1em = 10px */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body, main, h1, h2, h3, h4, ul, li, nav, p, section, div {
   padding: 0;
   margin: 0;
+}
+
+body {
+  width: 100%;
+  font-size: 62.5%; /* Set 1em = 10px */
+  margin-bottom: 75px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -220,28 +226,21 @@ header {
 .carousel-container {
   position: relative;
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .slides {
   position: relative;
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .slides img {
-  max-width: 100%;
+  width: 100%;
 }
 
   /* Carousel Text */
 
   .carousel-text {
     position: absolute;
-    /* z-index: 1; */
     text-shadow: 0 0 20px var(--color-one);
     width: 100%;
     top: calc(50% - 74px);
@@ -307,27 +306,21 @@ header {
 /* Welcome */
 .welcome {
   width: 60%;
-  margin: 50px auto;
-}
-
-.welcome h2, .welcome p {
-  text-align: center;
-  color: var(--color-one);
-  font-family: var(--fonts-two);
-}
-
-.welcome h2 {
-  font-family: var(--fonts-one);
+  margin: 25px auto 100px auto;
 }
 
 .welcome p {
   text-align: justify;
-  margin-top: 10px;
+  color: var(--color-one);
+  font-family: var(--fonts-two);
 }
 /* Welcome End */
 
 /* Footer */
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background-color: var(--color-one);
   width: 100%;
   height: 75px;
