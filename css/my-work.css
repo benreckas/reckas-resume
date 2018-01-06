@@ -56,17 +56,45 @@ em {
 }
 
 /* Media Queries Start */
+@media only screen and (max-width: 1920px) {
+    .listr {
+        background-image: url("../images/listr-med.jpg");
+    }
+    
+    .clovis-coffee {
+        background-image: url("../images/clovis-coffee-med.jpg");
+    }
+    
+    .calculator {
+        background-image: url("../images/calculator-med.jpg");
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .listr {
+        background-image: url("../images/listr-sml.jpg");
+    }
+    
+    .clovis-coffee {
+        background-image: url("../images/clovis-coffee-sml.jpg");
+    }
+    
+    .calculator {
+        background-image: url("../images/calculator-sml.jpg");
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .listr, .clovis-coffee, .calculator {
         background-attachment: scroll;
         background-position-y: 0;
-        height: 450px;
+        height: 380px;
     }
 }
 
 @media only screen and (max-width: 700px) {
     .listr, .clovis-coffee, .calculator {
-        height: 350px;
+        height: 280px;
     }
 
     .project-text h3, p {
@@ -80,7 +108,8 @@ em {
 
 @media only screen and (max-width: 500px) {
     .listr, .clovis-coffee, .calculator {
-        height: 250px;
+        height: 180px;
     }
 }
+
 /* Media Queries End */
