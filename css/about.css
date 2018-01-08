@@ -38,6 +38,7 @@ h2 {
   align-content: center;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
 }
   
 .skills h2 {
