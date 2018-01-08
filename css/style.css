@@ -79,6 +79,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 8px var(--color-one);
 }
 
 .spacing-container {
@@ -328,6 +329,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 8px var(--color-one);
 }
 
 .footer i {
@@ -638,6 +640,12 @@ footer {
 /* Animation End */
 
 /* Media Queries Start */
+@media (min-width: 1021px) { 
+  .mobile-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 1020px) { 
   .welcome {
     width: 80%;
@@ -658,10 +666,12 @@ footer {
   .hero {
     top: calc(50% - 82px);
   }
-}
 
-@media (min-width: 701px) { 
-  .mobile-nav {
+  .menu {
+    display: block;
+  }
+
+  nav ul {
     display: none;
   }
 }
@@ -698,14 +708,6 @@ footer {
 
   i.fa-angle-right {
     top: calc(50% - 20px);
-  }
-
-  .menu {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
   }
 
   .welcome p {
