@@ -38,7 +38,6 @@ h2 {
   align-content: center;
   align-items: center;
   justify-content: center;
-  transform-style: preserve-3d;
 }
   
 .skills h2 {
@@ -56,6 +55,7 @@ h2 {
   justify-content: center;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transform-style: preserve-3d;
 }
 
 .skill h3 {
