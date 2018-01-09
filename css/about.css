@@ -55,7 +55,6 @@ h2 {
   justify-content: center;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  transform-style: preserve-3d;
 }
 
 .skill h3 {
@@ -66,6 +65,7 @@ h2 {
 
 .skill i {
   pointer-events: none;
+  transform-style: preserve-3d;
 }
 
 .skill-lvl {
