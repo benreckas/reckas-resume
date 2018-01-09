@@ -56,6 +56,7 @@ h2 {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   z-index: 0;
+  transform-style: flat;
 }
 
 .skill h3 {
@@ -95,7 +96,6 @@ h2 {
   animation-name: flip;
   animation-fill-mode: forwards;
   animation-direction: normal;
-  transform-style: preserve-3d;
 }
 
 @keyframes flip {
@@ -114,7 +114,6 @@ h2 {
   animation-name: unflip;
   animation-fill-mode: forwards;
   animation-direction: normal;
-  transform-style: preserve-3d;
 }
 
 @keyframes unflip {
