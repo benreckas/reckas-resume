@@ -3,14 +3,17 @@
 const mobileMenu = document.querySelector('#menu');
 const mobileNav = document.querySelector('.mobile-nav');
 const mainNav = document.querySelector('nav');
+// Hamburger Menu
 const hmTop = document.querySelector('.hm-top');
 const hmMid = document.querySelector('.hm-mid');
 const hmBot = document.querySelector('.hm-bot');
+// Nav Items
 const home = document.querySelector('.home-nav');
 const about = document.querySelector('.about-nav');
 const work = document.querySelector('.work-nav');
 
 mobileMenu.addEventListener('click', menu);
+window.addEventListener('resize', resize);
 
 function menu(e) {
 	if(mobileMenu.classList.contains('open-icon') === true) {
@@ -51,5 +54,18 @@ function menu(e) {
 		about.classList.add('aniAboutClose');
         work.classList.add('aniWorkClose');
         return;
-    };
+	};
+};
+
+function resize(e) {
+	if(mobileMenu.hasAttribute('display: none;') === true) {
+		//Remove unneeded classes
+		hmMid.classList.remove('aniMidClose');
+		hmTop.classList.remove('aniTopClose');
+		hmBot.classList.remove('aniBotClose');
+		mobileMenu.classList.remove('aniClose');
+		home.classList.remove('aniHomeClose');
+		about.classList.remove('aniAboutClose');
+		work.classList.remove('aniWorkClose');
+	}
 };

@@ -1,9 +1,9 @@
 // DOM Queries
-const slides = document.getElementsByClassName('slides');
-const leftArrowIcon = document.querySelector('.fa-angle-left');
-const rightArrowIcon = document.querySelector('.fa-angle-right');
-const pauseIcon = document.querySelector('.fa-pause');
-const playIcon = document.querySelector('.fa-play');
+const slides = document.querySelectorAll('#slides');
+const leftArrowIcon = document.querySelector('#left-arrow');
+const rightArrowIcon = document.querySelector('#right-arrow');
+const pauseIcon = document.querySelector('#pause');
+const playIcon = document.querySelector('#play');
 
 // Event Listeners
 leftArrowIcon.addEventListener('click', prev);
@@ -11,7 +11,7 @@ rightArrowIcon.addEventListener('click', next);
 pauseIcon.addEventListener('click', pause);
 playIcon.addEventListener('click', play);
 
-// Carousel
+// Carousel Counters
 let slideIndex = 0;
 let timer;
 
@@ -29,12 +29,14 @@ function next(e) {
     carousel();
 };
 
+// Pause the Carousel by Clearing Timer
 function pause(e) {
     clearInterval(timer);
     pauseIcon.classList.add('hidden');
     playIcon.classList.remove('hidden');
 };
 
+// Play the Carousel
 function play(e) {
     pauseIcon.classList.remove('hidden');
     playIcon.classList.add('hidden');
@@ -42,23 +44,16 @@ function play(e) {
 }
 
 // Change Carousel Attributes
-const carousel = () => {
+function carousel() {
     // If paused, advance slide and do not add timer, else advance slide and add timer for next slide.
-    if(pauseIcon.classList.contains('hidden') === true) {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.add('hidden');
-        }
-        slides[slideIndex].classList.remove('hidden');
-        return;
-    } else {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.add('hidden');
-        }
-        slides[slideIndex].classList.remove('hidden');
-        timer = setInterval(next, 6000);
-        return;
-    };
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.add('hidden');
+    }
+    slides[slideIndex].classList.remove('hidden');
+    if (playIcon.classList.contains('hidden') === true) {
+        timer = setInterval(next, 6000)
+    }
 };
 
-// Run Functions on Page Load
+// Run Fn on Page Load
 carousel();

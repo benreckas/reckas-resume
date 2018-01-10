@@ -13,10 +13,7 @@
   <body>
     <!-- Header Start -->
     <header>
-        <div class="header-text">
-            <h1><a href="index.html">Ben Reckas</a></h1>
-            <!-- <h2>Web Design & Development</h2> -->
-        </div>
+        <h1 class="header-text"><a href="index.html">Ben Reckas</a></h1>
         <!-- Nav Start -->
         <nav>
             <div id ="menu" class="menu open-icon">
@@ -32,7 +29,7 @@
         </nav>
         <!-- Nav End -->
     </header>
-    <div class="spacing-container"></div>
+    <div class="spacing-container"></div> <!-- Correcting For Fixed Header -->
     <ul class="mobile-nav">
         <a href="index.html"><li class="mobile-nav-item home-nav">Home</li></a>
         <a href="about.html"><li class="mobile-nav-item about-nav">About</li></a>
@@ -42,25 +39,25 @@
     <!-- Carousel Start -->
     <div class="carousel-container">
         <!-- Controls -->
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-        <i class="fa fa-pause" aria-hidden="true"></i>
-        <i class="fa fa-play hidden" aria-hidden="true"></i>
+        <i id="left-arrow" class="fa fa-angle-left" aria-hidden="true"></i>
+        <i id="right-arrow" class="fa fa-angle-right" aria-hidden="true"></i>
+        <i id="pause" class="fa fa-pause" aria-hidden="true"></i>
+        <i id="play" class="fa fa-play hidden" aria-hidden="true"></i>
         <!-- Content -->
-        <div class="slides">
+        <div id="slides" class="slides">
             <div class="carousel-text hero">
                 <h1>Ben Reckas</h1>
                 <h2>Web Design & Development</h2>
             </div>
             <img src="images/carousel-01-lrg.jpg" srcset="images/carousel-01-sml.jpg 1280w, images/carousel-01-med.jpg 1920w" alt="Laptop with code editor open. Sunglasses and Phone sitting nearby.">
         </div>
-        <div class="slides">
+        <div id="slides" class="slides">
             <div class="carousel-text">
                 <h1><a href="about.html">About Me</a></h1>
             </div>
             <img src="images/carousel-02-lrg.jpg" srcset="images/carousel-02-sml.jpg 1280w, images/carousel-02-med.jpg 1920w" alt="Ben with his wife and daughter sitting in a field for a family portrait.">
         </div>
-        <div class="slides">
+        <div id="slides" class="slides">
             <div class="carousel-text">
                 <h1><a href="my-work.html">My Work</a></h1>
             </div>
@@ -74,7 +71,7 @@
     </div>
     <!-- Welcome End -->
     <!-- Footer Start -->
-    <footer class="footer">
+    <footer>
         <a href="https://github.com/benreckas" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/benreckas/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
         <a href="https://twitter.com/benreckas" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
