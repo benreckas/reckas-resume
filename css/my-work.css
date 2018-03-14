@@ -75,7 +75,7 @@ em {
     font-size: 3em;
     text-align: center;
     z-index: 2;
-    margin-bottom: 30px;
+    margin: 30px 0;
     text-transform: uppercase;
     font-family: var(--fonts-one);
     opacity: 0;
@@ -86,9 +86,9 @@ em {
     font-size: 20em;
     transition: all .6s;
     color: var(--color-one);
-    margin-top: 30px;
     animation: 3s fadeIn 1s forwards;
     opacity: 0;
+    margin: -20px 0;
 }
 
 .github-hero:hover {
@@ -96,7 +96,7 @@ em {
 }
 
 .slash-left, .slash-right {
-    background-color: rgba(225, 225, 225, .8);
+    background-color: rgba(235, 235, 235, 1);
     height: 100%;
     width: 50%;
     position: absolute;
@@ -121,7 +121,7 @@ em {
 
 @keyframes slashLeft {
     0% {
-        transform: skew(-45deg) translateX(-100%);
+        transform: skew(-45deg) translateX(-65%);
     }
     100% {
         transform: skew(-45deg) translateX(-45%);
@@ -130,7 +130,7 @@ em {
 
 @keyframes slashRight {
     0% {
-        transform: skew(-45deg) translateX(100%);
+        transform: skew(-45deg) translateX(25%);
     }
     100% {
         transform: skew(-45deg) translateX(45%);
