@@ -191,11 +191,11 @@ header {
     width: 30px;
     height: 30px;
   }
-  
+
   .menu:hover {
     cursor: pointer;
   }
-  
+
   .hm {
     position: absolute;
     background-color: rgba(255, 255, 255, 1);
@@ -204,17 +204,17 @@ header {
     border-radius: 1px;
     transform-origin: center;
   }
-  
+
   .hm-mid {
     transform: translate(0, 12.5px);
     z-index: 4;
   }
-  
+
   .hm-top {
     transform: translate(0, 0);
     z-index: 3;
   }
-  
+
   .hm-bot {
     transform: translate(0, 25px);
     z-index: 2;
@@ -349,7 +349,7 @@ footer {
 }
 /* Footer End */
 
-.hidden { 
+.hidden {
   display: none;
 }
 
@@ -640,13 +640,13 @@ footer {
 /* Animation End */
 
 /* Media Queries Start */
-@media (min-width: 1021px) { 
+@media (min-width: 1021px) {
   .mobile-nav {
     display: none;
   }
 }
 
-@media (max-width: 1020px) { 
+@media (max-width: 1020px) {
   .welcome {
     width: 80%;
   }
@@ -676,7 +676,7 @@ footer {
   }
 }
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
   .carousel-text {
     top: calc(50% - 44.5px);
   }
@@ -715,7 +715,7 @@ footer {
   }
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
   .welcome {
     width: 90%;
   }

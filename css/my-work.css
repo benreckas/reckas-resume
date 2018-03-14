@@ -55,16 +55,107 @@ em {
     background-size: 100%;
 }
 
+/* Github Link */
+
+.github-container {
+    background-color: rgba(240, 240, 240, 1);
+    color: white;
+    position: relative;
+    box-shadow: 0 0 5px rgba(35, 35, 35, .3);
+}
+
+.github-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-cap {
+    color: var(--color-one);
+    font-size: 3em;
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: var(--fonts-one);
+    opacity: 0;
+    animation: 3s fadeIn 1.5s forwards;
+}
+
+.github-hero {
+    font-size: 20em;
+    transition: all .6s;
+    color: var(--color-one);
+    margin-top: 30px;
+    animation: 3s fadeIn 1s forwards;
+    opacity: 0;
+}
+
+.github-hero:hover {
+    transform: scale(1.05);
+}
+
+.slash-left, .slash-right {
+    background-color: rgba(225, 225, 225, .8);
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    transform: skew(-45deg);
+}
+
+.slash-left {
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+    animation: slashLeft 5s forwards ease-out;
+}
+
+.slash-right {
+    transform-origin: bottom right;
+    top: 0;
+    right: 0;
+    animation: slashRight 5s forwards ease-out;
+}
+
+/* Animations */
+
+@keyframes slashLeft {
+    0% {
+        transform: skew(-45deg) translateX(-100%);
+    }
+    100% {
+        transform: skew(-45deg) translateX(-45%);
+    }
+}
+
+@keyframes slashRight {
+    0% {
+        transform: skew(-45deg) translateX(100%);
+    }
+    100% {
+        transform: skew(-45deg) translateX(45%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Media Queries Start */
 @media only screen and (max-width: 1920px) {
     .listr {
         background-image: url("../images/listr-med.jpg");
     }
-    
+
     .clovis-coffee {
         background-image: url("../images/clovis-coffee-med.jpg");
     }
-    
+
     .calculator {
         background-image: url("../images/calculator-med.jpg");
     }
@@ -74,11 +165,11 @@ em {
     .listr {
         background-image: url("../images/listr-sml.jpg");
     }
-    
+
     .clovis-coffee {
         background-image: url("../images/clovis-coffee-sml.jpg");
     }
-    
+
     .calculator {
         background-image: url("../images/calculator-sml.jpg");
     }

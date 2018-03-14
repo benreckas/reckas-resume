@@ -10,7 +10,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-  
+
 .about img {
   width: 350px;
   margin: 0 50px 0 0;
@@ -21,7 +21,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .about-p p {
@@ -29,7 +29,7 @@ h2 {
   margin-top: 20px;
   text-align: justify;
 }
-  
+
 .skills {
   width: 90%;
   margin: 0 auto 30px auto;
@@ -39,7 +39,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-  
+
 .skills h2 {
   width: 100%;
   text-align: center;
@@ -148,7 +148,7 @@ h2 {
 
 /* Media Queries */
 
-@media (max-width: 1020px) { 
+@media (max-width: 1020px) {
   .about {
     margin: 20px auto;
     flex-wrap: wrap;
@@ -163,14 +163,14 @@ h2 {
   }
 }
 
-@media (max-width: 700px) { 
+@media (max-width: 700px) {
 
   .about p {
     text-align: left;
   }
 }
 
-@media (max-width: 450px) { 
+@media (max-width: 450px) {
   .about {
     flex-wrap: wrap;
     width: 100%;
@@ -189,6 +189,6 @@ h2 {
   }
 
   .skill {
-    margin: 10px 0; 
+    margin: 10px 0;
   }
 }
