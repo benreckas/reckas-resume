@@ -62,6 +62,7 @@ em {
     color: white;
     position: relative;
     box-shadow: 0 0 5px rgba(35, 35, 35, .3);
+    overflow: hidden;
 }
 
 .github-content {
