@@ -16,6 +16,7 @@ I am currently in the process of redesiging the site, with new added features an
 #### Features
 
 - Angular
+- SCSS
 - Node / Express Server
 - Mongo DB
 - CSS/Angular Animations
