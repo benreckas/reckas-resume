@@ -83,6 +83,12 @@ em {
     animation: 3s fadeIn 1.5s forwards;
 }
 
+h2 span {
+    font-size: 1.2em;
+    display: inline-block;
+    transform: translateY(3px);
+}
+
 .github-hero {
     font-size: 20em;
     transition: all .6s;
