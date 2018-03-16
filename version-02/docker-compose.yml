@@ -12,7 +12,7 @@ services:
   public:
     build: './public'
     ports:
-      - '4400:4400'
+      - '4200:4200'
       - '49153:49153'
     volumes:
       - './public:/usr/src/app'
@@ -24,7 +24,7 @@ services:
   server:
     build: './server'
     ports:
-      - '5400:8000'
+      - '3000:8000'
     volumes:
       - './server:/home/node/server'
     depends_on:

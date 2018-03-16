@@ -1,5 +1,5 @@
 #Create image based on the official Node 9 image from dockerhub
-FROM node:9
+FROM node:8
 
 # Create a directory where our app will be placed
 RUN mkdir /home/node/server
@@ -17,7 +17,7 @@ RUN npm install
 COPY . /home/node/server
 
 # Expose the port the app runs in
-EXPOSE 5400
+EXPOSE 3000
 
 # Serve the app
 CMD ["npm", "start"]

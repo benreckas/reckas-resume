@@ -1,5 +1,5 @@
-#Create image based on the official Node 9 image from dockerhub
-FROM node:9
+#Create image based on the official Node 8 image from dockerhub
+FROM node:8
 
 # Create a directory where our app will be place
 RUN mkdir -p usr/src/app
@@ -17,8 +17,8 @@ RUN npm install
 COPY . /usr/src/app
 
 # Expose the ports the app runs in
-EXPOSE 4400 49153
+EXPOSE 4200 49153
 
 # Serve the app
-CMD ["npm", "start"]
+CMD ["ng", "serve"]
 
