@@ -11,6 +11,9 @@ WORKDIR /home/node/server
 COPY package.json /home/node/server
 
 # Install dependnecies
+RUN npm install -g nodemon
+
+# Install dependnecies
 RUN npm install
 
 # Get all the code needed to run the app

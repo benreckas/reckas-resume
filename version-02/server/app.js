@@ -44,3 +44,10 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+//Set Port
+const port = 3000;
+
+// Listen on provided port, on all network interfaces
+app.listen(port, () =>  {
+    console.log('Reckas API running on port ' +port)});
