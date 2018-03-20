@@ -1,4 +1,6 @@
-#Create image based on the official Node 9 image from dockerhub
+# Server Contianer
+
+# Create image based on the official Node 9 image from dockerhub
 FROM node:8
 
 # Create a directory where our app will be placed
@@ -10,14 +12,14 @@ WORKDIR /home/node/server
 # Copy dependency definitions
 COPY package.json /home/node/server
 
+# Get all the code needed to run the app
+COPY . /home/node/server
+
 # Install dependnecies
 RUN npm install -g nodemon
 
 # Install dependnecies
 RUN npm install
-
-# Get all the code needed to run the app
-COPY . /home/node/server
 
 # Expose the port the app runs in
 EXPOSE 3000
