@@ -1,16 +1,11 @@
 # Angular Container
 
 #Create image based on the official Node 8 image from dockerhub
-FROM node:8
+FROM node:latest
 
-# Create a directory where our app will be place
+# Create a directory in container and cd into it
 RUN mkdir -p usr/src/app
-
-# Change directory so that our commands run inside this new directory
 WORKDIR /usr/src/app
-
-# Copy dependency definitions
-COPY package.json  /usr/src/app
 
 # Get all the code needed to run the app
 COPY . /usr/src/app
